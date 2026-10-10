@@ -1,22 +1,25 @@
+use anchor_lang::prelude::*;
+
 pub mod constants;
 pub mod error;
 pub mod instructions;
 pub mod state;
 
-use anchor_lang::prelude::*;
-
 pub use constants::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("5dMnfwj9iPrxpuFMnbWw3DnPi8S1h2axN6XxEv9VqdF5");
+declare_id!("Gr3Wbf8LDvcsMup4NRSMEMgMbd3QXATEgL2ZvyMze4zM");
 
 #[program]
 pub mod property_vault {
     use super::*;
 
-    pub fn handle_list_and_tokenize_property(ctx: Context<ListAndTokenizeProperty>) -> Result<()> {
-        ctx.accounts.handle_list_and_tokenize_property()
+    pub fn list_and_tokenize_property(
+        ctx: Context<ListAndTokenizeProperty>,
+        args: ListArgs,
+    ) -> Result<()> {
+        ctx.accounts.handle_list_and_tokenize_property(args, &ctx.bumps)
     }
 
     pub fn invest(ctx: Context<Invest>) -> Result<()> {

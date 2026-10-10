@@ -4,4 +4,6 @@ use anchor_lang::prelude::*;
 pub enum PropertyVaultError {
     #[msg("Unauthorized")]
     Unauthorized,
+    #[msg("Invalid property configuration")]
+    InvalidConfig,
 }

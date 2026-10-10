@@ -23,7 +23,7 @@ custom-panic = []
 [dependencies]
 anchor-lang = "1.2.0"
 anchor-spl = "1.2.0"
-
+property-vault-transfer-hook = { path = "../property-vault-transfer-hook", features = ["no-entrypoint"] }
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

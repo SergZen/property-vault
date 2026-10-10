@@ -6,7 +6,8 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-property_vault = "6uRuRs4UiJJpoFmrnd29AJUDWg3NyJBZBK6aLqLrysjn"
+property_vault = "Gr3Wbf8LDvcsMup4NRSMEMgMbd3QXATEgL2ZvyMze4zM"
+property_vault_transfer_hook = "3NCEUa3FXyjb71jwy7t5TYtncC46C61WYdhrJgLA2AXP"
 
 [provider]
 cluster = "localnet"
